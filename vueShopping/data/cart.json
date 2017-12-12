@@ -1,0 +1,58 @@
+{
+  "status": 0,
+  "message": "success",
+  "result": {
+      "totalMoney":59,
+      "list":[
+      {
+      "name": "小音箱",
+      "price": 199,
+      "count": 1,
+      "amount": 19,
+      "imgPic": "img/1.jpg",
+      "gifts": [
+        {
+          "partId":"10001",
+          "giftName":"打火机"
+        },
+        {
+          "partId":"10002",
+          "giftName":"火柴"
+        }
+      ]
+      },
+      {
+      "name": "小米电视",
+      "price": 2999,
+      "count": 1,
+      "amount": 20,
+      "imgPic": "img/10.jpg",
+        "gifts": [
+          {
+            "partId":"10001",
+            "giftName":"打火机"
+          },
+          {
+            "partId":"10002",
+            "giftName":"火柴盒"
+          }
+        ]
+      },
+        {
+          "name": "小米充电宝",
+
+          "price": 79,
+          "count": 1,
+          "amount": 20,
+          "imgPic": "img/5.jpg",
+          "gifts": [
+            {
+              "partId":"10001",
+              "giftName":"吸管"
+            }
+          ]
+        }
+      ]
+  }
+
+}
