@@ -6,15 +6,15 @@
     const FRAME_RATE = 60
     const PARTICLE_NUM = 2000
     const RADIUS = Math.PI * 2
-    const CANVASWIDTH = 500
+    const CANVASWIDTH = 800
     const CANVASHEIGHT = 150
     const CANVASID = 'canvas'
 
     let texts = ['To 大乔','蔚蓝星空下', '男孩独自坐望', '星海闪烁', '仿佛在问', '为什么你一个人', '我在等一个人', '一个女孩', '这个女孩', '真没什么好的', '性格很倔强', '脾气又不好',
-        '还很强势', '但男孩觉得', '这都是表面', '在他的眼中', '女孩任性起来', '耍起混来的时候', '真的很可爱', '可是', '就是这样的她', '也非常的脆弱', '也有',
-        '伤心难过的时候', '而男孩', '想要做的', '就是陪伴着她', '让她开心起来', '已经攥紧的拳头', '却总是放下', '一次', '女孩说要给男孩做饭', '男孩欣喜万分', '感到无比的温馨和喜悦',
-        '他多想走进女孩内心的城堡', '不善言辞的他' , '却只呆呆望着', '在城堡外', '继续等待', '男孩再次抬头', '望向星空', '嘿',
-        '女孩', '我能成为', '你的星星吗', '小小的星光', '不过分炙热', '不会灼伤你', '让你耍赖', '给你依赖', '给你幸福', '等待着你', 'Always', 'Forever'
+    '还很强势', '但男孩觉得', '这都是表面', '在男孩的眼中', '明白女孩内心的真诚', '可是', '就是这样的她', '也非常的脆弱', '也有',
+    '伤心难过的时候', '而男孩', '想要做的', '就是陪伴着她', '让她开心起来', '男孩多次攥紧拳头', '想对女孩说', '却又总是放下', '一次', '女孩说要给男孩做饭', '男孩欣喜万分', '感到无比的温馨',
+        '男孩多想', '走进女孩内心的城堡', '不善言辞的他' , '却只呆呆望着', '在城堡外', '继续等待', '男孩再次抬头', '望向星空', '嘿',
+        '女孩', '我能成为', '你的星星吗', '小小的星光', '不过分炙热', '让你耍赖', '给你依赖', '给你幸福', '等待着你', 'Always', 'Forever'
     ]
 
     let canvas,
@@ -122,7 +122,7 @@
     }
 
     function event() {
-        setInterval(function(){
+        let timer = setInterval(function(){
             textIndex++
             if (textIndex >= texts.length) {
                 textIndex--
@@ -133,6 +133,7 @@
         }, 6000)
 
         document.addEventListener('click', function (e) {
+            clearInterval(timer)
             textIndex++
             if (textIndex >= texts.length) {
                 textIndex--
@@ -140,6 +141,15 @@
             }
             text = texts[textIndex]
             console.log(textIndex)
+            timer = setInterval(function(){
+                textIndex++
+                if (textIndex >= texts.length) {
+                    textIndex--
+                    return
+                }
+                text = texts[textIndex]
+                console.log(textIndex)
+            }, 6000)
         }, false)
 
         document.addEventListener('touchstart', function (e) {
