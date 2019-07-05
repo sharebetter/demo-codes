@@ -152,25 +152,25 @@
             }, 6000)
         }, false)
 
-        document.addEventListener('touchstart', function (e) {
-            clearInterval(timer)
-            textIndex++
-            if (textIndex >= texts.length) {
-                textIndex--
-                return
-            }
-            text = texts[textIndex]
-            console.log(textIndex)
-            timer = setInterval(function(){
-                textIndex++
-                if (textIndex >= texts.length) {
-                    textIndex--
-                    return
-                }
-                text = texts[textIndex]
-                console.log(textIndex)
-            }, 6000)
-        }, false)
+        // document.addEventListener('touchstart', function (e) {
+        //     clearInterval(timer)
+        //     textIndex++
+        //     if (textIndex >= texts.length) {
+        //         textIndex--
+        //         return
+        //     }
+        //     text = texts[textIndex]
+        //     console.log(textIndex)
+        //     timer = setInterval(function(){
+        //         textIndex++
+        //         if (textIndex >= texts.length) {
+        //             textIndex--
+        //             return
+        //         }
+        //         text = texts[textIndex]
+        //         console.log(textIndex)
+        //     }, 6000)
+        // }, false)
     }
 
     function init() {
